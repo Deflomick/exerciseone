@@ -5,46 +5,19 @@
 
 
 import 'package:flutter/material.dart';
+import './testControl.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-@override
-State<StatefulWidget> createState() {
-  // TODO: implement createState
-  return _MyAppState();
-}
-}
-
-class _MyAppState extends State<MyApp> {
-  var textFirst= ('Random text');
-  void textChange (){
-
-    print('Another Random Text');
-
-  }
-
-
-
+class MyApp extends StatelessWidget {
 @override
 Widget build(BuildContext buildContext){
-
 return MaterialApp(
   home: Scaffold(
   appBar:AppBar(
     title: Text('Exercise 1'),
   ),
-    body: Column(
-      children: [
-      Text('Random Text'),
-        RaisedButton(
-            child:
-            Text('Change the Text'),
-            onPressed: textChange),
-        
-      ],
-
-    ),
+    body: textControl(),
 
     /*RaisedButton(
       color: Colors.orange,
